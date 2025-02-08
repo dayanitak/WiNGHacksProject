@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=4 uid="uid://cfr5nnx22hkja"]
+[gd_scene load_steps=12 format=4 uid="uid://cfr5nnx22hkja"]
 
 [ext_resource type="PackedScene" uid="uid://davsxthbquydv" path="res://Scenes/Nova.tscn" id="1_oaipo"]
 [ext_resource type="Texture2D" uid="uid://debfkg8m40s72" path="res://Assets/Vetra_Scenes.png" id="2_jbsx7"]
 [ext_resource type="Texture2D" uid="uid://dvs5alp1b4vj4" path="res://Assets/Vetra_House_Cow.png" id="3_mv83h"]
 [ext_resource type="PackedScene" uid="uid://cgm36b7t174bp" path="res://Scenes/Seyla(mom).tscn" id="4_pb2gd"]
+[ext_resource type="Texture2D" uid="uid://b45mpuu50c8dp" path="res://Assets/untitled.png" id="5_815hj"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2n6ds"]
 distance = -137.0
@@ -37,9 +38,18 @@ sources/1 = SubResource("TileSetAtlasSource_iytjw")
 
 [node name="Main Game" type="Node"]
 
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+offset_left = -546.0
+offset_top = -433.0
+offset_right = 606.0
+offset_bottom = 215.0
+texture = ExtResource("5_815hj")
+
 [node name="Nova" parent="." instance=ExtResource("1_oaipo")]
 z_index = 5
 position = Vector2(-2, -32)
+scale = Vector2(0.8, 0.8)
 
 [node name="Camera2D" type="Camera2D" parent="Nova"]
 position = Vector2(2, 32)
