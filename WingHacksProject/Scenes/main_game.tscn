@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfr5nnx22hkja"]
+
+[ext_resource type="PackedScene" uid="uid://davsxthbquydv" path="res://Scenes/Nova.tscn" id="1_oaipo"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u6eow"]
+
+[node name="Main Game" type="Node"]
+
+[node name="Nova" parent="." instance=ExtResource("1_oaipo")]
+position = Vector2(-2, -32)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_u6eow")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)

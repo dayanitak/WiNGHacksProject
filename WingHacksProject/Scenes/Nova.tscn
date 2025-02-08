@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://davsxthbquydv"]
+
+[ext_resource type="Texture2D" uid="uid://j8gw8mdssksv" path="res://Assets/Nova Sprite Sheet.png" id="1_iml2a"]
+[ext_resource type="Script" path="res://Scenes/nova.gd" id="1_j0qqi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8jb3"]
+atlas = ExtResource("1_iml2a")
+region = Rect2(0, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oswuc"]
+atlas = ExtResource("1_iml2a")
+region = Rect2(0, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqb0t"]
+atlas = ExtResource("1_iml2a")
+region = Rect2(64, 640, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_88ifq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8jb3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oswuc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqb0t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u8e4i"]
+height = 44.0
+
+[node name="Nova" type="CharacterBody2D"]
+script = ExtResource("1_j0qqi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_88ifq")
+autoplay = "default"
+frame_progress = 0.27914
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+shape = SubResource("CapsuleShape2D_u8e4i")
