@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://cl75do6s07j7q"]
+
+[ext_resource type="Script" path="res://addons/LPCAnimatedSprite/LPCAnimatedSprite2D.gd" id="1_oj2l4"]
+[ext_resource type="Texture2D" uid="uid://c38teseo3odv7" path="res://addons/LPCAnimatedSprite/icon2d.png" id="2_8sn65"]
+[ext_resource type="Script" path="res://addons/LPCAnimatedSprite/LPCSpriteSheet.gd" id="3_eruda"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nljf8"]
+
+[sub_resource type="Resource" id="Resource_7l2eo"]
+script = ExtResource("3_eruda")
+SpriteSheet = ExtResource("2_8sn65")
+Name = "bald_guy"
+SpriteType = 0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nljf8")
+
+[node name="LPCAnimatedSprite2D" type="Node2D" parent="AnimatedSprite2D"]
+script = ExtResource("1_oj2l4")
+SpriteSheets = Array[ExtResource("3_eruda")]([null])
+
+[node name="LPCAnimatedSprite2D" type="Node2D" parent="."]
+script = ExtResource("1_oj2l4")
+SpriteSheets = Array[ExtResource("3_eruda")]([SubResource("Resource_7l2eo")])

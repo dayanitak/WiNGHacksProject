@@ -1,0 +1,92 @@
+[gd_scene load_steps=13 format=3 uid="uid://c66sbns1hksyi"]
+
+[ext_resource type="Texture2D" uid="uid://dmc8hfuswgwy8" path="res://addons/LPCAnimatedSprite/Download36024.png" id="1_kbicb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_boj13"]
+atlas = ExtResource("1_kbicb")
+region = Rect2(0, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1j7m"]
+atlas = ExtResource("1_kbicb")
+region = Rect2(64, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_canty"]
+atlas = ExtResource("1_kbicb")
+region = Rect2(128, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rlnq"]
+atlas = ExtResource("1_kbicb")
+region = Rect2(192, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pg08i"]
+atlas = ExtResource("1_kbicb")
+region = Rect2(256, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qpkv"]
+atlas = ExtResource("1_kbicb")
+region = Rect2(320, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5o16"]
+atlas = ExtResource("1_kbicb")
+region = Rect2(384, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6m528"]
+atlas = ExtResource("1_kbicb")
+region = Rect2(448, 640, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evudn"]
+atlas = ExtResource("1_kbicb")
+region = Rect2(512, 640, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vlvhy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_boj13")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1j7m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_canty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rlnq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pg08i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qpkv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5o16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6m528")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evudn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xecg3"]
+radius = 18.3576
+
+[node name="Node2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_vlvhy")
+autoplay = "default"
+frame_progress = 0.243209
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 14)
+shape = SubResource("CircleShape2D_xecg3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)

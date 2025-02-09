@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=3 uid="uid://bn54ao24qe2rq"]
+
+[ext_resource type="PackedScene" uid="uid://c2prp54h1dc4d" path="res://game_node.tscn" id="1_fxcdu"]
+[ext_resource type="Texture2D" uid="uid://duqy8ch6iwukl" path="res://addons/Dialouge_box.png" id="2_vbgnf"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2ki4j"]
+
+[sub_resource type="FontFile" id="FontFile_dv4om"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/2/0/ascent = 0.0
+cache/0/2/0/descent = 0.0
+cache/0/2/0/underline_position = 0.0
+cache/0/2/0/underline_thickness = 0.0
+cache/0/2/0/scale = 1.0
+cache/0/2/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/12/0/ascent = 0.0
+cache/0/12/0/descent = 0.0
+cache/0/12/0/underline_position = 0.0
+cache/0/12/0/underline_thickness = 0.0
+cache/0/12/0/scale = 1.0
+cache/0/12/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+cache/0/10/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/10/0 = Vector2(0, 0)
+
+[node name="Node2D" type="Node"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1, 0)
+shape = SubResource("WorldBoundaryShape2D_2ki4j")
+
+[node name="Node2D" parent="." instance=ExtResource("1_fxcdu")]
+texture_filter = 1
+position = Vector2(0, -12)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 69.0
+offset_top = -77.0
+offset_right = 97.0
+offset_bottom = -40.0
+
+[node name="DialougeBox" type="Sprite2D" parent="MarginContainer"]
+texture_filter = 1
+position = Vector2(-19, -38)
+scale = Vector2(1.58333, 1.14583)
+texture = ExtResource("2_vbgnf")
+
+[node name="TextEdit" type="TextEdit" parent="MarginContainer/DialougeBox"]
+texture_filter = 1
+offset_left = -17.0526
+offset_top = -18.3273
+offset_right = 17.9474
+offset_bottom = 18.6727
+size_flags_stretch_ratio = 0.0
+theme_override_colors/background_color = Color(0.858824, 0.74902, 0.556863, 1)
+theme_override_colors/font_color = Color(0.376471, 0.345098, 0.545098, 1)
+theme_override_fonts/font = SubResource("FontFile_dv4om")
+theme_override_font_sizes/font_size = 10
+text = "Hi"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer/DialougeBox/TextEdit"]
+layout_mode = 0
+offset_left = 43.579
+offset_top = -51.4911
+offset_right = 83.579
+offset_bottom = -11.4911
