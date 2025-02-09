@@ -1,7 +1,5 @@
-extends Node
+extends Button
 
-var scenes: Array[String] = ["res://scenes/start.tscn","res://scenes/prologue.tscn","res://scenes/main_game.tscn"]
-var currLevel = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,8 +10,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func changeLevel(num: int):
-	currLevel = num
-	get_tree().change_scene_to_file(scenes[currLevel])
-	
+func _on_pressed() -> void:
+	GameManager.changeLevel(2)
 	

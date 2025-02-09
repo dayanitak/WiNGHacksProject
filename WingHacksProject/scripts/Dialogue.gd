@@ -1,6 +1,6 @@
 extends Node
 
-@onready var textBoxScene = preload("res://speech_bubble.tscn")
+@onready var textBoxScene = preload("res://scenes/speech_bubble.tscn")
 
 var dialogueLines: Array[String] = []
 var index = 0
@@ -10,6 +10,7 @@ var textBoxPos: Vector2
 
 var dialogueOn = false
 var advanceLine = false
+
 
 
 func startDialogue(position: Vector2, lines: Array[String]):
@@ -24,6 +25,7 @@ func startDialogue(position: Vector2, lines: Array[String]):
 	dialogueOn = true;
 	
 func show():
+	
 	textBox = textBoxScene.instantiate()
 	textBox.finished.connect(_on_textBox_finished)
 	get_tree().root.add_child(textBox)
@@ -42,7 +44,6 @@ func _unhandled_input(_event: InputEvent) -> void:
 		index += 1
 		if (index >= dialogueLines.size()):
 			dialogueOn = false
-			
 			index = 0
 			return
 		else:

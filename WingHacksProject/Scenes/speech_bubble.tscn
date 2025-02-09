@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://d011cvtajksmq"]
+
+[ext_resource type="Script" path="res://scripts/speech_bubble.gd" id="1_dw0xj"]
+[ext_resource type="Texture2D" uid="uid://mi533xbg3sxo" path="res://Assets/Dialouge_box.png" id="2_cyhh1"]
+[ext_resource type="FontFile" uid="uid://xeck72yc4ih2" path="res://assets/tech_club_01/Tech_Club_01.otf" id="3_wk2k5"]
+
+[node name="SpeechBubble" type="MarginContainer"]
+offset_left = 166.0
+offset_top = -6.0
+offset_right = 202.0
+offset_bottom = 27.0
+script = ExtResource("1_dw0xj")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_cyhh1")
+region_rect = Rect2(16, 16, 16, 16)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_wk2k5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TypeTime" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="TypeTime" to="." method="_on_type_time_timeout"]
