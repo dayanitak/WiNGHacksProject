@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/speech_bubble.gd" id="1_dw0xj"]
 [ext_resource type="Texture2D" uid="uid://mi533xbg3sxo" path="res://Assets/Dialouge_box.png" id="2_cyhh1"]
-[ext_resource type="FontFile" uid="uid://xeck72yc4ih2" path="res://assets/tech_club_01/Tech_Club_01.otf" id="3_wk2k5"]
+[ext_resource type="FontFile" uid="uid://xeck72yc4ih2" path="res://Assets/tech_club_01/Tech_Club_01.otf" id="3_wk2k5"]
 
 [node name="SpeechBubble" type="MarginContainer"]
 z_index = 6
