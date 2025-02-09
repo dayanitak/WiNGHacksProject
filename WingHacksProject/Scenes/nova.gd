@@ -4,6 +4,8 @@ extends CharacterBody2D
 const SPEED = 200
 const JUMP_VELOCITY = -300
 
+var cowlines:Array[String] = ["moo"]
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
