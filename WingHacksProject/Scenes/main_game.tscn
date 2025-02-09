@@ -82,6 +82,10 @@ height = 84.0
 
 [node name="Main Game" type="Node"]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-215, -39)
+zoom = Vector2(2, 2)
+
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 z_index = -3
 position = Vector2(27, 10)

@@ -1,33 +1,24 @@
-[gd_scene load_steps=11 format=3 uid="uid://dlyhgmnod10jg"]
-
-[ext_resource type="Texture2D" uid="uid://blj5ngjif8lns" path="res://addons/LPCAnimatedSprite/Download38180.png" id="2_yqb2q"]
+[gd_scene load_steps=10 format=3 uid="uid://b3c8vau787rd5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wiska"]
-atlas = ExtResource("2_yqb2q")
 region = Rect2(0, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_djd0i"]
-atlas = ExtResource("2_yqb2q")
 region = Rect2(64, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lcknl"]
-atlas = ExtResource("2_yqb2q")
 region = Rect2(128, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rjsrr"]
-atlas = ExtResource("2_yqb2q")
 region = Rect2(192, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7aooh"]
-atlas = ExtResource("2_yqb2q")
 region = Rect2(256, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8mt7h"]
-atlas = ExtResource("2_yqb2q")
 region = Rect2(320, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n1r76"]
-atlas = ExtResource("2_yqb2q")
 region = Rect2(384, 64, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c6br7"]

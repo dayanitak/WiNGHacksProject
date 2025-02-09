@@ -1,13 +1,13 @@
-[gd_scene load_steps=18 format=3 uid="uid://c2prp54h1dc4d"]
+[gd_scene load_steps=18 format=3 uid="uid://bjbqdafpg0j2i"]
 
 [ext_resource type="Texture2D" uid="uid://tljhb7dvd3y" path="res://9205428.png" id="1_h7gex"]
-[ext_resource type="PackedScene" uid="uid://dlyhgmnod10jg" path="res://lpc_animated_sprite_bee.tscn" id="3_i1eyh"]
+[ext_resource type="PackedScene" uid="uid://b3c8vau787rd5" path="res://lpc_animated_sprite_bee.tscn" id="3_i1eyh"]
 [ext_resource type="PackedScene" uid="uid://cqchrhe7gwd5b" path="res://lpc_animated_sprite_rey.tscn" id="4_6s8xq"]
 [ext_resource type="Texture2D" uid="uid://cru7f6cdgfudp" path="res://Rocky_Grass_tileset.png" id="4_vks6s"]
 [ext_resource type="Texture2D" uid="uid://dpx1csgvjy02p" path="res://Stone_tileset.png" id="5_t5t0j"]
 [ext_resource type="Texture2D" uid="uid://bjslusoej7kby" path="res://Ghostly_grass_tileset.png" id="6_cmvke"]
-[ext_resource type="PackedScene" uid="uid://c66sbns1hksyi" path="res://lpc_animated_sprite_giant.tscn" id="7_fbph5"]
-[ext_resource type="PackedScene" uid="uid://dxtf880y7riys" path="res://nova.tscn" id="8_cwgn8"]
+[ext_resource type="PackedScene" path="res://lpc_animated_sprite_giant.tscn" id="7_fbph5"]
+[ext_resource type="PackedScene" uid="uid://mu627dd6kg4x" path="res://nova.tscn" id="8_cwgn8"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_41a0w"]
 
