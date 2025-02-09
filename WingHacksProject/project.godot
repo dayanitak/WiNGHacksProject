@@ -19,7 +19,6 @@ config/icon="res://icon.svg"
 
 GameManager="*res://scripts/GameManager.gd"
 Dialogue="*res://scripts/Dialogue.gd"
-DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [editor_plugins]
 

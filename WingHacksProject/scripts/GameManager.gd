@@ -1,6 +1,6 @@
 extends Node
 
-var scenes: Array[String] = ["res://scenes/start.tscn","res://scenes/prologue.tscn","res://scenes/main_game.tscn", "res://scenes/rocket_transition.tscn","res://game_node.tscn"]
+var scenes: Array[String] = ["res://scenes/start.tscn","res://scenes/prologue.tscn","res://scenes/main_game.tscn","res://Scenes/rocket_transition.tscn","res://game_node.tscn","res://Scenes/rocket_transition2_FINAL.tscn"]
 var currLevel = 0
 
 # Called when the node enters the scene tree for the first time.

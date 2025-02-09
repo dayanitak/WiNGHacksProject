@@ -1,25 +1,25 @@
-[gd_scene load_steps=11 format=3 uid="uid://dft30l4ynsw2b"]
+[gd_scene load_steps=11 format=3 uid="uid://dww2bqwq8wq1g"]
 
-[ext_resource type="Texture2D" uid="uid://k2u4mfnu8uok" path="res://New Piskel (1).png" id="1_xqjgc"]
-[ext_resource type="Script" path="res://Scenes/rocketFly.gd" id="2_81do3"]
-[ext_resource type="Texture2D" uid="uid://dl6vy04oembrb" path="res://New Piskel (2).png" id="2_ii6kk"]
-[ext_resource type="Texture2D" uid="uid://c4j5ggwo0kyrc" path="res://New Piskel (3).png" id="3_3cllw"]
-[ext_resource type="Texture2D" uid="uid://0iiu3ja74yhe" path="res://Assets/Novas_Space_Ship (1).png" id="4_5yi6n"]
-[ext_resource type="FontFile" uid="uid://vrr7su5mmmd" path="res://Assets/tech_club_01/Tech_Club_01.ttf" id="4_oirvf"]
-[ext_resource type="Texture2D" uid="uid://b8w7g4lap7ecc" path="res://Assets/Novas_Space_Ship (3).png" id="5_h5eew"]
-[ext_resource type="Texture2D" uid="uid://i51jphi4y55g" path="res://Assets/Novas_Space_Ship (4).png" id="6_r11lm"]
+[ext_resource type="Texture2D" uid="uid://k2u4mfnu8uok" path="res://New Piskel (1).png" id="1_c7vs6"]
+[ext_resource type="Texture2D" uid="uid://dl6vy04oembrb" path="res://New Piskel (2).png" id="2_0u45b"]
+[ext_resource type="Texture2D" uid="uid://c4j5ggwo0kyrc" path="res://New Piskel (3).png" id="3_7p3wk"]
+[ext_resource type="FontFile" uid="uid://vrr7su5mmmd" path="res://Assets/tech_club_01/Tech_Club_01.ttf" id="4_gfig4"]
+[ext_resource type="Script" path="res://Scenes/rocket_fly_2.gd" id="5_xqht5"]
+[ext_resource type="Texture2D" uid="uid://0iiu3ja74yhe" path="res://Assets/Novas_Space_Ship (1).png" id="6_sdj7w"]
+[ext_resource type="Texture2D" uid="uid://b8w7g4lap7ecc" path="res://Assets/Novas_Space_Ship (3).png" id="7_jh5hx"]
+[ext_resource type="Texture2D" uid="uid://i51jphi4y55g" path="res://Assets/Novas_Space_Ship (4).png" id="8_2xmx4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xs0i8"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_xqjgc")
+"texture": ExtResource("1_c7vs6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_ii6kk")
+"texture": ExtResource("2_0u45b")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_3cllw")
+"texture": ExtResource("3_7p3wk")
 }],
 "loop": true,
 "name": &"default",
@@ -30,13 +30,13 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_5yi6n")
+"texture": ExtResource("6_sdj7w")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_h5eew")
+"texture": ExtResource("7_jh5hx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_r11lm")
+"texture": ExtResource("8_2xmx4")
 }],
 "loop": true,
 "name": &"default",
@@ -70,18 +70,19 @@ offset_left = -431.436
 offset_top = -195.519
 offset_right = 443.564
 offset_bottom = -91.5194
-theme_override_fonts/font = ExtResource("4_oirvf")
+theme_override_fonts/font = ExtResource("4_gfig4")
 theme_override_font_sizes/font_size = 39
-text = "\"We are the universe, experiencing itself.\" 
--Alan Watts"
+text = "\"Change is inevitable, growth is optional\" 
+-John Maxwell"
 horizontal_alignment = 1
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 gravity_scale = 0.0
-script = ExtResource("2_81do3")
+script = ExtResource("5_xqht5")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="RigidBody2D"]
-position = Vector2(-3.8147e-06, 260)
+position = Vector2(17, 202)
+rotation = 0.612384
 scale = Vector2(3.03125, 3.03125)
 sprite_frames = SubResource("SpriteFrames_1onca")
 autoplay = "default"
