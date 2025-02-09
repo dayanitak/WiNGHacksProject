@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://buwsydlwa0v2j"]
 
-[ext_resource type="Texture2D" uid="uid://b45mpuu50c8dp" path="res://Assets/untitled.png" id="1_ffxui"]
+[ext_resource type="Texture2D" uid="uid://k2u4mfnu8uok" path="res://New Piskel (1).png" id="1_b7c1b"]
 [ext_resource type="FontFile" uid="uid://vrr7su5mmmd" path="res://Assets/tech_club_01/Tech_Club_01.ttf" id="2_sep2q"]
 [ext_resource type="Script" path="res://startbutton.gd" id="4_du8pg"]
 
@@ -13,7 +13,7 @@ offset_left = -693.0
 offset_top = -340.0
 offset_right = 670.0
 offset_bottom = 322.0
-texture = ExtResource("1_ffxui")
+texture = ExtResource("1_b7c1b")
 
 [node name="Button" type="Button" parent="."]
 texture_filter = 1

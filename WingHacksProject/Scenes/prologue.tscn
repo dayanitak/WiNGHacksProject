@@ -1,19 +1,29 @@
 [gd_scene load_steps=5 format=3 uid="uid://c8qgq17xt00tm"]
 
 [ext_resource type="Script" path="res://Scenes/prologue.gd" id="1_u11p5"]
-[ext_resource type="Texture2D" uid="uid://b45mpuu50c8dp" path="res://Assets/untitled.png" id="2_tg4xe"]
 [ext_resource type="Script" path="res://Scenes/prologuebutton.gd" id="3_8f57g"]
 [ext_resource type="FontFile" uid="uid://vrr7su5mmmd" path="res://Assets/tech_club_01/Tech_Club_01.ttf" id="3_mfc8m"]
+[ext_resource type="Texture2D" uid="uid://k2u4mfnu8uok" path="res://New Piskel (1).png" id="3_q5md3"]
 
 [node name="Prologue" type="Node"]
 script = ExtResource("1_u11p5")
 
+[node name="Label" type="Label" parent="."]
+z_index = 6
+offset_left = -228.0
+offset_top = -62.0
+offset_right = 38.0
+offset_bottom = -39.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_mfc8m")
+text = "[press down to advance dialogue]"
+
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -686.0
-offset_top = -368.0
-offset_right = 709.0
-offset_bottom = 332.0
-texture = ExtResource("2_tg4xe")
+offset_left = -772.0
+offset_top = -473.0
+offset_right = 228.0
+offset_bottom = 527.0
+texture = ExtResource("3_q5md3")
 stretch_mode = 1
 
 [node name="Button" type="Button" parent="."]

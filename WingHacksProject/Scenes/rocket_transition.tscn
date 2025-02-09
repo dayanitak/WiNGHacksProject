@@ -1,0 +1,88 @@
+[gd_scene load_steps=11 format=3 uid="uid://dxyx8byyeedmg"]
+
+[ext_resource type="Texture2D" uid="uid://k2u4mfnu8uok" path="res://New Piskel (1).png" id="1_xqjgc"]
+[ext_resource type="Script" path="res://Scenes/rocketFly.gd" id="2_81do3"]
+[ext_resource type="Texture2D" uid="uid://dl6vy04oembrb" path="res://New Piskel (2).png" id="2_ii6kk"]
+[ext_resource type="Texture2D" uid="uid://c4j5ggwo0kyrc" path="res://New Piskel (3).png" id="3_3cllw"]
+[ext_resource type="Texture2D" uid="uid://0iiu3ja74yhe" path="res://Assets/Novas_Space_Ship (1).png" id="4_5yi6n"]
+[ext_resource type="FontFile" uid="uid://vrr7su5mmmd" path="res://Assets/tech_club_01/Tech_Club_01.ttf" id="4_oirvf"]
+[ext_resource type="Texture2D" uid="uid://b8w7g4lap7ecc" path="res://Assets/Novas_Space_Ship (3).png" id="5_h5eew"]
+[ext_resource type="Texture2D" uid="uid://i51jphi4y55g" path="res://Assets/Novas_Space_Ship (4).png" id="6_r11lm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xs0i8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xqjgc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ii6kk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3cllw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1onca"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_5yi6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_h5eew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_r11lm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="RocketTransition" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -574.0
+offset_top = -319.0
+offset_right = 578.0
+offset_bottom = 329.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect"]
+position = Vector2(576.25, 469)
+scale = Vector2(1.1595, 0.982)
+sprite_frames = SubResource("SpriteFrames_xs0i8")
+autoplay = "default"
+
+[node name="Label" type="Label" parent="TextureRect/AnimatedSprite2D"]
+offset_left = -431.436
+offset_top = -195.519
+offset_right = 443.564
+offset_bottom = -91.5194
+theme_override_fonts/font = ExtResource("4_oirvf")
+theme_override_font_sizes/font_size = 39
+text = "\"We are the universe, experiencing itself.\" 
+-Alan Watts"
+horizontal_alignment = 1
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+gravity_scale = 0.0
+script = ExtResource("2_81do3")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="RigidBody2D"]
+position = Vector2(-3.8147e-06, 260)
+scale = Vector2(3.03125, 3.03125)
+sprite_frames = SubResource("SpriteFrames_1onca")
+autoplay = "default"
+frame = 1
+frame_progress = 0.0189877
